@@ -86,8 +86,9 @@ namespace Bai2Ag
                 }
             }
 
-            strltElement = strltElement.Distinct().OrderBy(x => x).ToList() ;
-            Suport = (int)(ltElement.Count * Suportpt);
+            strltElement = strltElement.Distinct().OrderBy(x => x).ToList();
+            double d = Math.Round(ltElement.Count * Suportpt,2);
+            Suport = (int)(Math.Ceiling(d));
         }
 
         public void setC(int level)
